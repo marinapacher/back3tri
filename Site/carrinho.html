@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Marina Pacher — Carrinho</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid justify-content-center">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.svg" height="130" alt="Marina Pacher — Ateliê de Arte">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0 justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">GALERIA</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="carrinho.html" id="nav-carrinho">CARRINHO</a>
+                        </li>
+                        <li class="nav-item" id="nav-login">
+                            <a class="nav-link" href="login.html">ENTRAR</a>
+                        </li>
+                    </ul>
+                    <div class="dropdown m-3">
+                        <button id="user-info" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: none">
+                            Olá, usuário
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="cadastro.html">Perfil</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="logout()">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 class="page-title">Carrinho</h1>
+            <p class="subtitle">Confira as peças escolhidas antes de finalizar a compra.</p>
+
+            <div id="lista-carrinho">
+                <!-- Os produtos do carrinho serão carregados pelo carrinho.js -->
+            </div>
+
+            <p id="total-carrinho" class="total-carrinho"></p>
+        </section>
+
+        <section class="resumo-carrinho">
+            <h2>Finalizar compra</h2>
+
+            <label for="forma-pagamento">Forma de pagamento</label>
+            <select id="forma-pagamento">
+                <option value="" selected>Selecione...</option>
+                <option value="Pix">Pix</option>
+                <option value="Cartão de crédito">Cartão de crédito</option>
+                <option value="Cartão de débito">Cartão de débito</option>
+                <option value="Boleto">Boleto</option>
+            </select>
+
+            <div class="acoes-carrinho">
+                <button id="btn-finalizar" type="button">Finalizar compra</button>
+                <button id="btn-limpar-carrinho" type="button" class="btn-secundario">Limpar carrinho</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- ALERTA TOAST -->
+    <div class="position-fixed" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050;">
+        <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+            <div class="d-flex">
+                <div class="toast-body" id="toast-message">
+                    Mensagem
+                </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Fechar"></button>
+        </div>
+    </div>
+    <!-- FIM ALERTA TOAST -->
+    <footer> </footer>
+
+    <script src="./pages.js"></script>
+    <script src="./carrinho.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
