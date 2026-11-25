@@ -1,4 +1,4 @@
 node_modules/
 .env
-# As imagens não ficam no GitHub: são baixadas do Google Drive (npm run imagens)
-img/
+# As imagens da pasta img/ são geradas de 30-imagens.png (npm run imagens)
+# e ficam versionadas no GitHub.

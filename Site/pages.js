@@ -73,7 +73,7 @@ function mostrarProdutos(listaProdutos) {
         card.className = "produto-estoque";
 
         const imagem = document.createElement("img");
-        // A imagem é servida pela API (pasta img/ baixada do Google Drive)
+        // A imagem é servida pela API (pasta img/ gerada por npm run imagens)
         imagem.src = "http://localhost:3000/" + produto.caminho_img;
         imagem.alt = produto.nome;
 

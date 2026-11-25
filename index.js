@@ -27,8 +27,9 @@ const cors = require("cors")
 app.use(cors())
 
 // SERVIR AS IMAGENS DOS PRODUTOS NO LADO DO SERVIDOR
-// As imagens são baixadas do Google Drive pelo "npm run imagens" (não ficam no GitHub)
-// Ex.: http://localhost:3000/img/arte.png
+// As imagens são separadas da grade "30-imagens.png" pelo "npm run imagens"
+// A pasta img/ fica no GitHub e também pode ser regerada com "npm run imagens"
+// Ex.: http://localhost:3000/img/obra-01.png
 app.use("/img", express.static("img"))
 
 // CADASTRAR CLIENTE

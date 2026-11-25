@@ -82,7 +82,7 @@ function criar_card(produto) {
     card.className = "produto-estoque";
 
     const imagem = document.createElement("img");
-    // A imagem é servida pela API (pasta img/ baixada do Google Drive)
+    // A imagem é servida pela API (pasta img/ gerada por npm run imagens)
     if (produto.caminho_img) {
         imagem.src = LINK_API + "/" + produto.caminho_img;
     }
